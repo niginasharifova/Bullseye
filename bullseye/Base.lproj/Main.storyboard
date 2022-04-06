@@ -16,13 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="evV-jy-y1X">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="evV-jy-y1X">
                                 <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiE-0R-va1">
-                                <rect key="frame" x="150" y="44" width="597" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find number: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wiE-0R-va1">
+                                <rect key="frame" x="321" y="16" width="284" height="42"/>
                                 <color key="tintColor" red="0.93522492020000003" green="0.91666334039999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" red="0.79673057790000001" green="0.61118263009999996" blue="0.235739857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,9 +61,8 @@
                                     <action selector="didTapTryAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wdd-TZ-tGO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-mK-Fi4">
-                                <rect key="frame" x="827" y="19" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-mK-Fi4">
+                                <rect key="frame" x="826" y="21" width="32" height="32"/>
                                 <state key="normal" image="InfoButton" backgroundImage="SmallButton"/>
                                 <connections>
                                     <segue destination="eyj-0e-C84" kind="show" id="MtG-l4-LlC"/>
@@ -99,6 +96,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.80936706852791884" green="0.6897747335910297" blue="0.5030730665324431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="evV-jy-y1X" secondAttribute="bottom" id="0ag-vb-XSh"/>
+                            <constraint firstItem="wiE-0R-va1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4fo-VW-aGh"/>
+                            <constraint firstAttribute="trailing" secondItem="evV-jy-y1X" secondAttribute="trailing" id="AXM-Nh-73z"/>
+                            <constraint firstItem="wiE-0R-va1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Aes-ch-zBP"/>
+                            <constraint firstItem="6ob-mK-Fi4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wiE-0R-va1" secondAttribute="trailing" constant="24" id="FF3-w0-Etg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ob-mK-Fi4" secondAttribute="trailing" constant="24" id="aor-ly-s5a"/>
+                            <constraint firstItem="wiE-0R-va1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bli-K5-bWU"/>
+                            <constraint firstItem="6ob-mK-Fi4" firstAttribute="centerY" secondItem="wiE-0R-va1" secondAttribute="centerY" id="ffh-OL-9Yu"/>
+                            <constraint firstItem="evV-jy-y1X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i9U-TC-vIs"/>
+                            <constraint firstItem="evV-jy-y1X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rzL-Fh-oI0"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="roundLabel" destination="WiS-of-qQA" id="aej-zl-ppP"/>
@@ -120,9 +129,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="O7i-H1-YKu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="O7i-H1-YKu">
                                 <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nST-Vy-7OO">
                                 <rect key="frame" x="65" y="59" width="32" height="32"/>
@@ -162,6 +170,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FpW-ZT-qny"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="O7i-H1-YKu" secondAttribute="bottom" id="AW2-rT-7m1"/>
+                            <constraint firstAttribute="trailing" secondItem="O7i-H1-YKu" secondAttribute="trailing" id="evU-Wb-Avd"/>
+                            <constraint firstItem="O7i-H1-YKu" firstAttribute="top" secondItem="FpW-ZT-qny" secondAttribute="top" id="lGa-6J-dw2"/>
+                            <constraint firstItem="O7i-H1-YKu" firstAttribute="leading" secondItem="LW5-sX-nue" secondAttribute="leading" id="xGv-C8-5Zb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wk2-Qu-h4h"/>
                     <connections>

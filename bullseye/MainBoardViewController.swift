@@ -91,7 +91,7 @@ class MainBoardViewController: UIViewController {
     }
     func updateGuessingNumber() {
         guessingNumber = Int.random(in: 1...100)
-        taskLabel.text = "Find number\(guessingNumber)"
+        taskLabel.text = "Find number: \(guessingNumber)"
     }
 }
 
