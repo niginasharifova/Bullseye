@@ -48,13 +48,9 @@ class MainBoardViewController: UIViewController {
         roundLabel.text = "round: \(round)"
         updateGuessingNumber()
         if round == 11 {
-//            UIAlertController
-            let alert = UIAlertController(title: "Game Over", message: "Your score is \(score)", preferredStyle: .alert)
-            let restartButton = UIAlertAction(title: "Restart Game", style: .cancel) { _ in
-                self.setUp()
-            }
-            alert.addAction(restartButton)
-            present(alert, animated: true)
+            round -= 1
+            roundLabel.text = "round: \(round)"
+            showResults()
         }
     }
     
@@ -74,7 +70,7 @@ class MainBoardViewController: UIViewController {
         
         // 3. setting score number to 0
         score = 0
-        scoreLabel.text = "Score: \(score)"
+        scoreLabel.text = "score: \(score)"
         
         round = 1
         roundLabel.text = "round: \(round)"
@@ -89,9 +85,30 @@ class MainBoardViewController: UIViewController {
         }
         scoreLabel.text = "Score: \(score)"
     }
+    
     func updateGuessingNumber() {
         guessingNumber = Int.random(in: 1...100)
         taskLabel.text = "Find number: \(guessingNumber)"
+    }
+    
+    func showResults(){
+        
+        //creating alert
+        let alert = UIAlertController(title: "Game Over", message: "Your score is \(score)", preferredStyle: .alert)
+        
+        //creating button for alert
+        let restartButton = UIAlertAction(title: "Restart Game", style: .cancel, handler: { _ in
+            
+            // action for button
+            print("Click")
+            self.setUp()
+        })
+    
+        //added button in alert
+        alert.addAction(restartButton)
+        
+        //displayed alert on screen
+        present(alert, animated: true)
     }
 }
 
