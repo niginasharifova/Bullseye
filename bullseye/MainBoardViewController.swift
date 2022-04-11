@@ -44,13 +44,15 @@ class MainBoardViewController: UIViewController {
     
     @IBAction func didTapOkButton(_ sender: UIButton) {
         setScore()
-        round += 1
-        roundLabel.text = "round: \(round)"
-        updateGuessingNumber()
-        if round == 11 {
-            round -= 1
-            roundLabel.text = "round: \(round)"
+        
+        if round == 10 {
             showResults()
+        }
+        round = round + 1
+        updateGuessingNumber()
+        
+        if round < 11 {
+            roundLabel.text = "round: \(round)"
         }
     }
     
